@@ -13,6 +13,10 @@ import matplotlib.pyplot as plt
 #1 Quadratic Equation
 print ("Problem 1: Quadratic Equation")
 
+#Asking for user input
+a = input('Enter "a" value = ')
+b = input('Enter "b" value = ')
+c = input('Enter "c" value = ')
 
 #2 Pythagorean Numbers
 print ("Problem 2: Pythagorean Numbers")
