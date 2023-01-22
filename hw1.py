@@ -6,6 +6,7 @@ January 17, 2022
 Homework #1
 """
 
+
 import math
 ## This is obsolete: import pylab
 import matplotlib.pyplot as plt
@@ -19,24 +20,29 @@ b = float(input('Enter "b" value = '))
 c = float(input('Enter "c" value = '))
 
 #Discriminant Value
-def findDis (a,b,c):
-    dis_value = b*b-4*a*c
-
-    print("Discriminant value = ") + dis_value
+if a == 0:
+        print ("Discriminant is equal to 0")
+        print ("Error")
+else:
+    dis_value = b * b - 4 * a * c
+    sqrt_val = math.sqrt(abs(dis_value))
 
     if dis_value > 0:
         print ("Discriminant is greater than 0")
+        print ("Real and different roots ")
+        print ((-b + sqrt_val)/(2 * a))
+        print ((-b - sqrt_val)/(2 * a))
 
     elif dis_value == 0:
         print ("Discriminant is equal to 0")
-
-    elif dis_value < 0:
-        print ("Discriminant is less than 0")
+        print ("Real with the same roots")
+        print (-b / (2 * a))
 
     else:
-        print ("Unknown Error")
+        print ("Discriminant is Complex") 
+        print (-b / (2 * a)), " + i"
+        print (-b / (2 * a)), " - i"
 
-findDis(a,b,c)
 """
 #2 Pythagorean Numbers
 print ("Problem 2: Pythagorean Numbers")
