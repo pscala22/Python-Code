@@ -4,6 +4,7 @@ Z23561522
 COP4045 - Python Programming
 January 17, 2022
 Homework #1
+Problem #2
 """
 
 import math
