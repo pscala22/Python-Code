@@ -4,6 +4,7 @@ Z23561522
 COP4045 - Python Programming
 January 17, 2022
 Homework #1
+Problem #1
 """
 
 
@@ -53,4 +54,5 @@ while True:
         else:
             plt.xlim((2*a-b-1, 2*a-b+1))
     plt.plot(x, y)
+    plt.scatter(x, y)
     plt.show()
