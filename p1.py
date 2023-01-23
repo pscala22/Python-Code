@@ -7,9 +7,7 @@ Homework #1
 Problem #1
 """
 
-
 import math
-## This is obsolete: import pylab
 import matplotlib.pyplot as plt
 
 #1 Quadratic Equation
@@ -24,21 +22,19 @@ while True:
 
     #Discriminant Value
     if a != 0:
-        dis_value = b ** 2 - 4 * a * c
+        dis_value = b ** 2 - 4 * a * c #calculating discriminant
         sqrt_val = math.sqrt(abs(dis_value))
 
         if dis_value > 0:
-            print ("Discriminant is greater than 0")
-            print ("Two Solutions: ")
             x1 = ((-b + sqrt_val)/(2 * a))
             x2 = ((-b - sqrt_val)/(2 * a))
-            print (x1, x2)
+            print (("Two Solutions: x1="),("%.5f" % x1)," x2=","%.5f" % x2) #Printing solutions to 5 decimal places
 
         elif dis_value == 0:
             print ("Discriminant is equal to 0")
             print ("One Solution")
             x =  (-b / (2 * a))
-            print (x)
+            print (("One Solution: "),("%.5f" % x)) #Printing solution to 5 decimal places
 
         elif dis_value < 0:
          print ("No Real Solutions") 
@@ -47,12 +43,13 @@ while True:
             print ("Error")
     
         #Plotting Function  
-        x = [i/10 for i in range(-30, 31)]
-        y = [a * i ** 2 + b * i + c for i in x]
-        if dis_value > 0:
-            plt.xlim((min(x1,x2)-1, max(x1,x2)+1))
-        else:
-            plt.xlim((2*a-b-1, 2*a-b+1))
+        x = [i/10 for i in range(-30, 31)] # 150 points
+        y = [a * i**2 + b * i + c for i in x]
+    if dis_value > 0:
+        plt.xlim((min(x1, x2)-1, max(x1, x2)+1))
+    else:
+        plt.xlim((-b/a-1, -b/a+1))
+    plt.ylim((min(y)-1, max(y)+1)) # adjust the y axis limit
     plt.plot(x, y)
     plt.scatter(x, y)
     plt.show()
