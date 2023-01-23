@@ -14,11 +14,11 @@ import matplotlib.pyplot as plt
 print ("Problem 1: Quadratic Equation")
 while True:
     #Asking for user input
-    a = float(input('Enter "a" value = '))
+    a = float(input('Enter a: '))
     if not a:
         break
-    b = float(input('Enter "b" value = '))
-    c = float(input('Enter "c" value = '))
+    b = float(input('Enter b: '))
+    c = float(input('Enter 1c: '))
 
     #Discriminant Value
     if a != 0:
