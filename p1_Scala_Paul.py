@@ -8,8 +8,10 @@ Problem #1
 """
 
 import math
+import time
 import matplotlib.pyplot as plt
 
+#1 Quadratic Equation
 #1 Quadratic Equation
 print ("Problem 1: Quadratic Equation")
 while True:
@@ -31,8 +33,6 @@ while True:
             print (("Two Solutions: x1="),("%.5f" % x1)," x2=","%.5f" % x2) #Printing solutions to 5 decimal places
 
         elif dis_value == 0:
-            print ("Discriminant is equal to 0")
-            print ("One Solution")
             x =  (-b / (2 * a))
             print (("One Solution: "),("%.5f" % x)) #Printing solution to 5 decimal places
 
@@ -53,3 +53,5 @@ while True:
     plt.plot(x, y)
     plt.scatter(x, y)
     plt.show()
+
+#Must close figure for code to re-execute
